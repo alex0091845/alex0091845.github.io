@@ -1,0 +1,31 @@
+:root {
+    --dark-primary: darkslategray;
+    --primary: cadetblue;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+    background-color: var(--dark-primary);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: content-box;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: var(--dark-primary);
+}
+
+.menu-item {
+    background-color: var(--dark-primary);
+    padding: 15px 3vw 15px 3vw;
+    transition: background-color ease-in-out .2s;
+}
+
+.menu-item:hover {
+    background-color: var(--primary);
+    transition: background-color ease-in-out .2s;
+}

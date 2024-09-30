@@ -2,7 +2,7 @@
 
   <head>
     <title> Alex Chow </title>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
   </head>
 
@@ -14,6 +14,21 @@
       <div class="menu-item">Blog Posts</div>
     </nav>
 
-    <p> Hello! </p>
+    <div id="body-container">
+      <nav class="table-of-contents">
+        <span id="chapter-1">Chapter 1</span>
+        <ul>
+          <li onclick="loadPost(event, `./blog-posts/chapter-1-1.html`)">1.1 - The Concept of Objects</li>
+          <li>... under construction 🚧</li>
+          <li onclick="loadPost(event, `./blog-posts/chapter-1-4.html`)">1.4 - The "this" keyword</li>
+        </ul>
+      </nav>
+      <div id="content-container">
+          
+      </div>
+    </div>
   </body>
+  <footer>
+    <p>Alex Chow 2024</p>
+  </footer>
 </html>

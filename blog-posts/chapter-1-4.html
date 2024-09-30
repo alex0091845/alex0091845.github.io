@@ -1,0 +1,51 @@
+<main>
+    <h1>Chapter 1.4. Writing Methods and Using "this"</h1>
+    <p>Short summary: <code>this</code> refers to the calling object.</p>
+
+    <p>To tie the whole "individual" concept together, understanding the `this` keyword is important.</p>
+    <p>You might have seen some code that has the <code>this</code> keyword in it.</p>
+
+    <div style="display: flex; justify-content: center;">
+        <img src="../assets/this-code.png" style="width: 50%; height: auto;"/>
+    </div>
+
+    <p class="caption">Code with <code>this</code> keyword.</p>
+
+    <p>What is it referring to? Who's <em>this</em>? (Oh no, not another knock knock joke)</p>
+
+    <p>Let's look at a couple of examples:</p>
+
+    <h2>Example 1</h2>
+    <p>When the <code>run</code> method is called on <code>tommy</code> (that is, <code>tommy.run()</code>), we're basically telling <code>tommy</code> to follow the instructions as written in the method <code>run</code>.</p>
+    <p>So when Tommy reads the instructions written in the <code>run</code> method: "Quickly take one big step with your right leg."</p>
+    <p>Tommy thinks: "your?" <em>Who's the <em>"you"</em> that they're talking about?</em> </p>
+    <p>Then he goes, <em>Oh wait, </em>I <em>am the "you" that they're referring to!</em></p>
+    <p>So he takes one big step with his right leg.</p>
+    <p>Obviously, there's also the left leg, and back to right, and so on. But we're not interested in that in particular right now.</p>
+    
+    <h2>Example 2</h2>
+    <p>Now let's say we also tell <code>isabelle</code> to <code>run</code>, aka <code>isabelle.run()</code>.</p>
+    <p>When Isabelle reads the <code>run</code> instructions, again it says "Quickly take one big step with your right leg."</p>
+    <p>Isabelle thinks: "your?" <em>Who's the <em>"you"</em> that they're talking about?</em> </p>
+    <p>Then she goes, <em>Oh wait, </em>I <em>am the "you" that they're referring to!</em></p>
+    <p>So she takes one big step with her right leg.</p>
+    <p>...and so on.</p>
+
+    <hr>
+    <p>So who's the "you" referring to? We don't know who will read it, but it refers to whoever is reading the instructions we wrote!</p>
+    <p>When Tommy reads and follows the instructions, he knows the "you" is referring to him.</p>
+    <p>When Isabelle reads and follows the instructions, she knows the "you" is referring to her.</p>
+    <p>Just as in the real world, you know who I'm referring to when I say "you."</p>
+
+    <div class="summary">
+        <h2>
+          Section Summary
+        </h2>
+        <p>In the method definition, <code>this</code> refers to the calling object (whatever is in front of the dot operator (.))</p>
+        <p>When the CPU runs the line <code>tommy.run()</code>, <code>tommy</code> is the calling object to the <code>run</code> method. So inside of the <code>run</code> method definition, <code>this</code> refers to <code>tommy</code>.</p>
+        <p>Similarly, when the CPU runs the line <code>isabelle.run()</code>, <code>isabelle</code> is the calling object to the <code>run</code> method now. So inside of the <code>run</code> method definition, <code>this</code> refers to <code>isabelle</code>.</p>
+
+        <p>So in summary, <code>this</code> is like "you", and refers to whoever is taking the action (calling the method).</p>
+        <p>IMPORTANT: we <em>don't know</em> who <code>this</code> refers to until the method is called (aka someone reads it/takes the action/calls the method!)</p>
+    </div>
+</main>

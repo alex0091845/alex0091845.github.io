@@ -1,0 +1,361 @@
+<main>
+    <h1>Chapter 1.1. The Concept of Objects</h1>
+    <p>I know a lot of other tutorials start with printing out Hello World and things, and we'll do that, but I want to start with the core of Java--the concept of objects, because Java is all about objects and classes.</p>
+    <p>I think all of us are familiar with the concept of objects once I explain it. It's pretty intuitive!</p>
+    <p>The core idea is that there are <strong>classes of objects or instances</strong>. Not classes as in academic courses, but <strong>classifications of objects or instances.</strong></p>
+    <p>For example, you might classify:</p>
+    <ul>
+      <li>Your Toyota Corolla, your friend's Subaru Crosstrek, and your family Honda CRV into a <code>Car</code> class.</li>
+      <li>A pine tree, a maple tree, and a cedar tree into a <code>Tree</code> class.</li>
+      <li>You, a friend of yours, and a family member of yours into a <code>Human</code> class.</li>
+    </ul>
+    <p>A more natural (though somewhat strange, still) way of saying these are:</p>
+    <ul>
+      <li>My family's Honda CRV is a Car.</li>
+      <li>That pine tree is a Tree.</li>
+      <li>My friend is a Human.</li>
+    </ul>
+	<table class="nice-table">
+		<thead>
+			<tr>
+				<td>Class</td>
+				<td>Examples of objects/instances</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Car</td>
+				<td class="image-cell">
+					<div>
+						<img src="../assets/toyota-corolla.png" />
+						<span>Your Toyota Corolla 2023</span>
+					</div>
+					<div>
+						<img src="../assets/subaru-crosstrek.png" />
+						<span>Your friend's Subraru Crosstrek 2023</span>
+					</div>
+					<div>
+						<img src="../assets/honda-crv.png" />
+						<span>Your family's Honda CRV 2023</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Tree</td>
+				<td class="image-cell">
+					<div>
+						<img src="../assets/pine-tree.png" />
+						<span>Some pine tree out in the wild</span>
+					</div>
+					<div>
+						<img src="../assets/maple-tree.png" />
+						<span>A maple tree in the wild</span>
+					</div>
+					<div>
+						<img src="../assets/cedar-tree.png" />
+						<span>A cedar tree somewhere in San Diego?</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Human</td>
+				<td class="image-cell">
+					<div>
+						<img src="../assets/you.png" />
+						<span>You</span>
+					</div>
+					<div>
+						<img src="../assets/friend.png" />
+						<span>Your friend</span>
+					</div>
+					<div>
+						<img src="../assets/fam-mem.png" />
+						<span>Your family member</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+    <p>And even though these are all different, separate, individual "objects," <strong>every object in a class have similar states and actions associated with them</strong>.</p>
+    <p>I wrote some examples below. See if you can come up with more!</p>
+    <table class="nice-table">
+      <thead>
+        <tr>
+          <td>Class</td>
+          <td>Properties/States</td>
+          <td>Actions</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Car</td>
+          <td>
+            year<br>
+            color<br>
+            speed<br>
+            fuel<br>
+            manufacturer<br>
+            model
+          </td>
+          <td>
+            drive()<br>
+            reverse()<br>
+            getGas()<br>
+            paint()
+          </td>
+        </tr>
+        <tr>
+          <td>Tree</td>
+          <td>
+            type<br>
+            age<br>
+            height
+          </td>
+          <td>
+            grow()<br>
+            water()
+          </td>
+        </tr>
+        <tr>
+          <td>Human</td>
+          <td>
+            name<br>
+            age<br>
+            height<br>
+            isHungry<br>
+            hydrationLevel<br>
+            energyLevel
+          </td>
+          <td>
+            greet()<br>
+            eat()<br>
+            drink()<br>
+            walk()<br>
+            run()
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Notice the way I wrote some of these things in (capitalization, parentheses, etc.). We'll talk more about these later.</p>
+      
+	<h2>Example</h2>
+
+    <p>Let's say we have some human objects in our program (yes, unfortunately in the software world, we are all objectified). We can visualize them as below:</p>
+
+	<table id="simple-table">
+		<tr class="image-cell">
+			<td>
+				<div class="img">
+					<img src="../assets/tommy.jpg" />
+					<span><strong>human0</strong></span>
+				</div>
+				<div class="stats">
+					<div>
+						<p>
+							name = "Tommy"<br>
+							age = 22<br>
+							height = 5.4<br>
+							isHungry = true<br>
+							hydrationLevel = 7<br>
+							energyLevel = 4
+						</p>
+					</div>
+				</div>
+				<div class="img" style="border-left: 1px solid black;">
+					<img src="../assets/isabelle.jpg" />
+					<span><strong>human1</strong></span>
+				</div>
+				<div class="stats">
+					<div>
+						<p>
+							name = "Isabelle"<br>
+							age = 26<br>
+							height = 5.5<br>
+							isHungry = false<br>
+							hydrationLevel = 5<br>
+							energyLevel = 5
+						</p>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<p class="caption">Initial values</p>
+      
+    <p>Let's look at the object on the left. It has all the properties and actions as defined in the class. Let's name it human0. It has a name of "Tommy", an age of 22, and so on.</p>
+    
+    <p>For the object on the right, let's name it human1. It has a name of "Isabelle," an age of 26, and so on.</p>
+    
+    <p>When we tell human0 (aka Tommy) to take an action of <code>drink()</code> (yes, we tell objects to take actions), its <code>hydrationLevel</code> goes up. But notice Isabelle's <code>hydrationLevel</code> does not change.</p>
+	
+	<table id="simple-table">
+		<tr class="image-cell">
+			<td>
+				<div class="img">
+					<img src="../assets/tommy.jpg" />
+					<span><strong>human0</strong></span>
+				</div>
+				<div class="stats">
+					<div>
+						<p>
+							name = "Tommy"<br>
+							age = 22<br>
+							height = 5.4<br>
+							isHungry = true<br>
+							<strong>hydrationLevel = 8</strong><br>
+							energyLevel = 4
+						</p>
+					</div>
+				</div>
+				<div class="img" style="border-left: 1px solid black;">
+					<img src="../assets/isabelle.jpg" />
+					<span><strong>human1</strong></span>
+				</div>
+				<div class="stats">
+					<div>
+						<p>
+							name = "Isabelle"<br>
+							age = 26<br>
+							height = 5.5<br>
+							isHungry = false<br>
+							hydrationLevel = 5<br>
+							energyLevel = 5
+						</p>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<p class="caption">After we call <code>tommy.drink()</code></p>
+    
+    <p>Only when we tell human1 (aka Isabelle) to take an action of <code>drink()</code>, its <code>hydrationLevel</code> goes up. But <em>its</em> <code>hydrationLevel</code> changed based on its own previous state, not Tommy's. </p>
+	
+	<p>After we call <code>isabelle.drink()</code>:</p>
+	
+	<table id="simple-table">
+		<tr class="image-cell">
+			<td>
+				<div class="img">
+					<img src="../assets/tommy.jpg" />
+					<span><strong>human0</strong></span>
+				</div>
+				<div class="stats">
+					<div>
+						<p>
+							name = "Tommy"<br>
+							age = 22<br>
+							height = 5.4<br>
+							isHungry = true<br>
+							<strong>hydrationLevel = 8</strong><br>
+							energyLevel = 4
+						</p>
+					</div>
+				</div>
+				<div class="img" style="border-left: 1px solid black;">
+					<img src="../assets/isabelle.jpg" />
+					<span><strong>human1</strong></span>
+				</div>
+				<div class="stats">
+					<div>
+						<p>
+							name = "Isabelle"<br>
+							age = 26<br>
+							height = 5.5<br>
+							isHungry = false<br>
+							<strong>hydrationLevel = 6</strong><br>
+							energyLevel = 5
+						</p>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<p class="caption">After we call <code>isabelle.drink()</code></p>
+
+    <p><strong>So the actions usually change or alter the object's <em>own</em> states in some way</strong>.</p>
+
+	<hr>
+    
+    <p>To summarize:</p>
+    <ul>
+      <li>Each individual object can act based on the action you tell them to do, and only that object acts according to the instructions we have given it.</li>
+      <li>Each individual object has their own states, and changing one object's states does not (usually) affect other objects' states.</li>
+    </ul>
+
+    <p>You might think, what's the big deal?</p>
+      
+    <p>Nothing! It's intuitive, right?</p>
+
+    <p>Just because you clap, doesn't mean <em>your friend</em> will clap.</p>
+      
+    <p>Just because you're eating and getting less hungry, doesn't mean <em>your friend</em> is getting less hungry.</p>
+      
+    <p>What's nice is that <strong>these states and actions are summarized and described in these things called classes</strong>.</p>
+
+    <p>You define states and actions for classes of objects. Then, each object acts similarly, but based on their own state.</p>
+      
+    <p>You should know from the fact that I just came up with the arbitrary states and actions above, that:</p>
+    <ol>
+      <li>There's no way to represent all states and actions of a real-world object in software.</li>
+      <li>What states and actions you include and define are <em>up to you</em>.</li>
+    </ol>
+      
+    <p>And guess what? Java already has a bunch of built-in classes--with their own states and actions--written and designed by other people. We can use them!</p>
+
+    <p>For example, there is a class for:</p>
+    <ul>
+      <li>Taking in user input, called <code>Scanner</code></li>
+      <li>Creating some colors so we can draw things, called <code>Color</code></li>
+      <li>Working with files, called <code>File</code></li>
+    </ul>
+    
+    <p>In Java, states are called <strong>fields</strong>. Actions are called <strong>methods</strong>. From now on, I'll use these terminology. Make sure to understand what I mean!</p>
+
+	<h2>Uses of Classes and Objects</h2>
+
+    <p>So… having said all this, what's the purpose of objects? Why do we need them?</p>
+    
+    <p>There are many uses of software objects, mostly when you want to treat a bunch of related information (fields) and action (methods) together into one unit (object):</p>
+    
+    <ul>
+      <li>In a game where you have players and enemies, you can have a Player class and an Enemy class.</li>
+      <li>In a backend (data processing/management) software for hospitals, schools, banks, coffee shop, you can have a Patient class, a Student class, a BankAccount class, and a Customer and a PremiumCustomer class respectively.</li>
+      <li>...and many more</li>
+    </ul>
+
+    <hr>
+    
+    <div class="summary">
+      <h2>
+        Section Summary
+      </h2>
+      <p>Let's summarize what you learned:</p>
+      <ul>
+        <li>A class:</li>
+        <ul>
+          <li>Is defined by someone like you. People write their own classes all the time. Some people decide others can use the classes and the code they wrote.</li>
+          <li>Describes fields and methods for any object/instance of that class.</li>
+          <ul>
+            <li>e.g., the Human class says that there's a field called name, and a method called drink() for any object of the Human class (any Human object)</li>
+          </ul>
+        </ul>
+      
+        <li>An object:</li>
+        <ul>
+          <li>Has its own individual field values and act on its own</li>
+          <ul>
+            <li>e.g., the name field value for one Human object might be “Tommy.” The name field value for another might be “Isabelle.”</li>
+            <li>e.g., while both Tommy and Isabelle's <code>hydrationLevel</code> goes up by 1 every time they drink, Tommy and Isabelle's <code>hydrationLevel</code>'s change individually.</li>
+          </ul>
+        </ul>
+        
+        <li>Object-oriented programming:</li>
+        <ul>
+          <li>Is defining classes to create objects, and then telling those objects to take certain actions!</li>
+        </ul>
+      </ul>
+    </div>
+  </main>
